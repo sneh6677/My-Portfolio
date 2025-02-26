@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome">
-    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/22af6e3359.js" crossorigin="anonymous"></script>
@@ -12,122 +12,135 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="Images/Logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home </a></li>
-                <li><a href="#about">About </a></li>
-                <li><a href="#services">Services </a></li>
-                <li><a href="#portfolio">Portfolio </a></li>
-                <li><a href="#contact">Contact </a></li>
-                <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
-            </ul> 
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <img src="Images/Intro.png" alt="Sneha Shivanna" class="profile-image">
-        </div>        
+            <div class="nav-left">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <img src="Images/Logo.png" class="logo">
+            </div>
+        </nav>        
+                        
     </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Hey, I'm Sneha.<br> A product & tech innovator.</h1>
+            <p>A software engineer and product thinker who loves solving complex problems through technology.</p>
+            <button class="cta-button" onclick="scrollToSection()">Explore My Work</button>
+        </div>
+        <div class="hero-image">
+            <img src="Images/background.png" alt="Sneha Shivanna">
+        </div>
+    </header>     
 </div>
 <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="Images/HeroImage.png">
+    <div class="about-container">
+        <!-- Left Image -->
+        <div class="about-col-1">
+            <img src="Images/HeroImage.png" alt="Sneha Shivanna">
+        </div>
+        
+        <!-- Right Text -->
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+                I’m a <span class="highlight">Certified Product Owner, Product Manager, and Data Enthusiast</span> with a passion for solving complex problems through technology and data-driven decision-making. 
+                With <span class="highlight">5+ years of experience</span> across product strategy, software development, and analytics, I’ve helped businesses optimize workflows, enhance user experiences, and build scalable systems in e-commerce, finance, and logistics.
+            </p>
+            <p>
+                Currently, I’m pursuing my <span class="highlight">Master’s in Engineering Management at UNC Charlotte</span>, where I focus on Total Quality Management, Product Strategy, Supply Chain, and Agile Methodologies. My career has been an exciting mix of tech, business, and innovation, allowing me to work on <span class="highlight">MVP development, AI-driven solutions, system scalability, and real-time process optimizations</span>.
+            </p>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('skills')">Skills</div>
+                <div class="tab" onclick="showTab('experience')">Experience</div>
+                <div class="tab" onclick="showTab('education')">Education</div>
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p class="about-text">
-                    I’m a <span class="highlight">Certified Product Owner, Product Manager, and Data Enthusiast</span> with a passion for solving complex problems through technology and data-driven decision-making. 
-                    With <span class="highlight">5+ years of experience</span> across product strategy, software development, and analytics, I’ve helped businesses optimize workflows, enhance user experiences, and build scalable systems in e-commerce, finance, and logistics. 
-                    <br><br>
-                    Currently, I’m pursuing my <span class="highlight">Master’s in Engineering Management at UNC Charlotte</span>, where I focus on Total Quality Management, Product Strategy, Supply Chain, and Agile Methodologies. 
-                    My career has been an exciting mix of tech, business, and innovation, allowing me to work on <span class="highlight">MVP development, AI-driven solutions, system scalability, and real-time process optimizations</span>.
-                    <br><br>
-                    For me, <span class="highlight">learning never stops</span>—I’m constantly evolving, whether it’s experimenting with new technologies, refining my problem-solving skills, or mentoring aspiring engineers. 
-                    I love working on <span class="highlight">high-impact projects</span> where I can merge tech, data, and strategic thinking to drive innovation and create meaningful solutions.
-                </p>
-                <div class="tabs">
-                    <div class="tab active" onclick="showTab('skills')">Skills</div>
-                    <div class="tab" onclick="showTab('experience')">Experience</div>
-                    <div class="tab" onclick="showTab('education')">Education</div>
+
+            <!-- Skills Section -->
+            <div id="skills" class="content active">
+                <div class="skill-item">
+                    <h3>🚀 Product Development and Ownership</h3>
+                    <p>Managing MVP creation and agile iterations.</p>
                 </div>
-            
-                <div id="skills" class="content active">
-                    <div class="skill-item">
-                        <h3>🚀Product Development and Ownership</h3>
-                        <p>User Experience and Wireframe Designing</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>📊 Market Research and Analysis</h3>
-                        <p>User Experience and Wireframe Designing</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>🗺️ Product Strategy and Roadmapping</h3>
-                        <p>User Experience and Wireframe Designing</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>📈 Business Analysis</h3>
-                        <p>User Experience and Wireframe Designing</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>🎨 UI/UX</h3>
-                        <p>User Experience and Wireframe Designing</p>
-                    </div>
+                <div class="skill-item">
+                    <h3>📊 Market Research and Analysis</h3>
+                    <p>Analyzing market trends to drive product decisions.</p>
                 </div>
-            
-                <div id="experience" class="content">
-                    <div class="experience-item">
-                        <h3>🚀 Associate Product Manager</h3>
-                        <h4>Cognizant Technology Solutions | Bangalore, India | Mar 2022 – May 2023</h4>
-                        <ul>
-                            <li>Drove <strong>MVP development</strong> for <strong>eBay</strong>, accelerating delivery by <strong>40%</strong> through Agile methodologies.</li>
-                            <li>Enhanced <strong>Verizon’s chatbot</strong> experience, cutting query resolution time by <strong>30%</strong>.</li>
-                            <li>Crafted <strong>user stories & personas</strong>, aligning product design with real user needs.</li>
-                            <li>Led <strong>product demos for 200+ stakeholders</strong>, boosting chatbot engagement by <strong>35%</strong>.</li>
-                        </ul>
-                    </div>
-                
-                    <div class="experience-item">
-                        <h3>💡 Senior Systems Engineer</h3>
-                        <h4>Infosys Limited | Bangalore, India | Jan 2019 - Mar 2022</h4>
-                        <ul>
-                            <li>Spearheaded <strong>GSTR-4 tax form development</strong>, improving operational efficiency by <strong>20%</strong>.</li>
-                            <li>Developed <strong>scalable REST APIs</strong> using <strong>Kafka, SQL & HBase</strong>, increasing system efficiency by <strong>25%</strong>.</li>
-                            <li>Streamlined <strong>B2B workflows</strong>, ensuring compliance with government regulations.</li>
-                        </ul>
-                    </div>
-                
-                    <div class="experience-item">
-                        <h3>🌍 Software Engineer</h3>
-                        <h4>DXC Technology | Bangalore, India | Aug 2018 - Jan 2019</h4>
-                        <ul>
-                            <li>Conducted <strong>market research</strong> for <strong>P&G</strong>, delivering insights for packaging strategies.</li>
-                            <li>Designed a <strong>go-to-market strategy</strong>, increasing <strong>serviceable obtainable market (SOM) by 20%</strong>.</li>
-                        </ul>
-                    </div>
-                </div>                
-            
-                <div id="education" class="content">
-                    <div class="education-item">
-                        <h3>🎓 Master’s in Engineering Management</h3>
-                        <h4>University of North Carolina - Charlotte | USA | Aug 2023 - May 2025</h4>
-                        <ul>
-                            <li>GPA: <strong>3.9</strong></li>
-                            <li>Relevant coursework: <strong>Total Quality Management, Product Strategy & Marketing, Project Management, Supply Chain Management, Capital Cost Estimation</strong></li>
-                        </ul>
-                    </div>
-                
-                    <div class="education-item">
-                        <h3>🎓 Bachelor’s in Computer Science</h3>
-                        <h4>Visvesvaraya Technological University | India | Jun 2014 – Jun 2018</h4>
-                        <ul>
-                            <li>GPA: <strong>4.0</strong></li>
-                            <li>Relevant coursework: <strong>Computer Science, Java, Python, Operations Management, Machine Learning, Database Management</strong></li>
-                        </ul>
-                    </div>
+                <div class="skill-item">
+                    <h3>🗺️ Product Strategy and Roadmapping</h3>
+                    <p>Designing roadmaps aligned with business goals.</p>
                 </div>
-                
+                <div class="skill-item">
+                    <h3>📈 Business Analysis</h3>
+                    <p>Interpreting data to improve operations and efficiency.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>🎨 UI/UX</h3>
+                    <p>Creating user-centric designs for better engagement.</p>
+                </div>
             </div>
+
+           <!-- Experience Section -->
+            <div id="experience" class="content">
+                <div class="experience-item">
+                    <h3>🚀 Associate Product Manager</h3>
+                    <h4>Cognizant Technology Solutions | Bangalore, India | Mar 2022 – May 2023</h4>
+                    <ul>
+                        <li>Accelerated MVP development for eBay by 40%.</li>
+                        <li>Optimized Verizon’s chatbot interactions, reducing resolution time by 30%.</li>
+                        <li>Led product demos for 200+ stakeholders.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>💡 Senior Systems Engineer</h3>
+                    <h4>Infosys Limited | Bangalore, India | Jan 2019 - Mar 2022</h4>
+                    <ul>
+                        <li>Developed scalable REST APIs using Kafka & SQL.</li>
+                        <li>Optimized tax workflows for GSTR-4, increasing efficiency by 20%.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>🌍 Software Engineer</h3>
+                    <h4>DXC Technology | Bangalore, India | Aug 2018 - Jan 2019</h4>
+                    <ul>
+                        <li>Conducted market research for P&G, delivering insights for packaging strategies.</li>
+                        <li>Designed a go-to-market strategy, increasing serviceable obtainable market (SOM) by 20%.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+           <!-- Education Section -->
+<div id="education" class="content">
+    <div class="education-item">
+        <h3>🎓 Master’s in Engineering Management</h3>
+        <h4>UNC Charlotte | USA</h4>
+        <ul>
+            <li>GPA: 3.9 | Specializing in Product Strategy, Supply Chain, and Agile.</li>
+            <li>Developed data-driven decision-making strategies.</li>
+            <li>Worked on industry-relevant projects optimizing business processes.</li>
+        </ul>
+    </div>
+
+    <div class="education-item">
+        <h3>🎓 Bachelor’s in Computer Science</h3>
+        <h4>Visvesvaraya Technological University | India</h4>
+        <ul>
+            <li>GPA: 4.0 | Focused on AI, ML, and Software Development.</li>
+            <li>Built machine learning models for predictive analysis.</li>
+            <li>Conducted research on AI-driven optimization techniques.</li>
+        </ul>
+    </div>
+</div>
+
         </div>
     </div>
 </div>
@@ -237,17 +250,24 @@
 <script>
     
     function showTab(tabId) {
-    document.querySelectorAll(".tab").forEach(tab => {
-        tab.classList.remove("active");
-    });
+    // Hide all content sections
     document.querySelectorAll(".content").forEach(content => {
         content.classList.remove("active");
     });
 
+    // Show the selected section
     document.getElementById(tabId).classList.add("active");
-    event.target.classList.add("active");
 }
+
 </script>
+<script>
+    function scrollToSection() {
+        document.getElementById("services").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+</script>
+
 <script>
     var sidemenuI = document.getElementById(sidemenu);
 
