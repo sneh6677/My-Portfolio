@@ -24,78 +24,134 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Certified Product Owner</p>
-            <h1>Hey,</h1>
-            <h1><span> I'm Sneha Shivanna</span></h1>
-        </div>
+            <img src="Images/Intro.png" alt="Sneha Shivanna" class="profile-image">
+        </div>        
     </div>
 </div>
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="Images/user.png">
+                <img src="Images/HeroImage.png">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Select, Project, Expect, Collect</p>
-                <div class="tab-title">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="about-text">
+                    I’m a <span class="highlight">Certified Product Owner, Software Developer, and Data Enthusiast</span> with a passion for solving complex problems through technology and data-driven decision-making. 
+                    With <span class="highlight">5+ years of experience</span> across product strategy, software development, and analytics, I’ve helped businesses optimize workflows, enhance user experiences, and build scalable systems in e-commerce, finance, and logistics. 
+                    <br><br>
+                    Currently, I’m pursuing my <span class="highlight">Master’s in Engineering Management at UNC Charlotte</span>, where I focus on Total Quality Management, Product Strategy, Supply Chain, and Agile Methodologies. 
+                    My career has been an exciting mix of tech, business, and innovation, allowing me to work on <span class="highlight">MVP development, AI-driven solutions, system scalability, and real-time process optimizations</span>.
+                    <br><br>
+                    For me, <span class="highlight">learning never stops</span>—I’m constantly evolving, whether it’s experimenting with new technologies, refining my problem-solving skills, or mentoring aspiring engineers. 
+                    I love working on <span class="highlight">high-impact projects</span> where I can merge tech, data, and strategic thinking to drive innovation and create meaningful solutions.
+                </p>
+                <div class="tabs">
+                    <div class="tab active" onclick="showTab('skills')">Skills</div>
+                    <div class="tab" onclick="showTab('experience')">Experience</div>
+                    <div class="tab" onclick="showTab('education')">Education</div>
                 </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Product Development and Ownership</span><br>User Experience and Wireframe designing</li>
-                        <li><span>Market Research and Analysis</span><br>User Experience and Wireframe designing</li>
-                        <li><span>Product Strategy and Roadmapping</span><br>User Experience and Wireframe designing</li>
-                        <li><span>Business Analysis</span><br>User Experience and Wireframe designing</li>
-                        <li><span>UI/UX</span><br>User Experience and Wireframe designing</li>
-                    </ul>
-
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>Associate Product Manager</span><br>Mar 2022  - May 2023</li>
-                        <li><span>Senior Systems Engineer</span><br>Jan 2019 - Mar 2022</li>
-                        <li><span>Software Engineer</span><br>Aug 2018 - Jan 2019</li>
-                        <li><span>Freelance Software Developer</span><br>Jan 2021 - Jun 2021</li>
-                    </ul>
-
-                </div>
-                <div class="tab-contents"id="education">
-                    <ul>
-                        <li><span>Master's in Engineering Management</span><br>University of North Carolina at Charlotte</li>
-                        <li><span>Bachelor's in Computer Science</span><br>Visveswaraya Technological University</li>
             
-                    </ul>
-
+                <div id="skills" class="content active">
+                    <div class="skill-item">
+                        <h3>🚀Product Development and Ownership</h3>
+                        <p>User Experience and Wireframe Designing</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>📊 Market Research and Analysis</h3>
+                        <p>User Experience and Wireframe Designing</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>🗺️ Product Strategy and Roadmapping</h3>
+                        <p>User Experience and Wireframe Designing</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>📈 Business Analysis</h3>
+                        <p>User Experience and Wireframe Designing</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>🎨 UI/UX</h3>
+                        <p>User Experience and Wireframe Designing</p>
+                    </div>
                 </div>
+            
+                <div id="experience" class="content">
+                    <div class="experience-item">
+                        <h3>🚀 Associate Product Manager</h3>
+                        <h4>Cognizant Technology Solutions | Bangalore, India | Mar 2022 – May 2023</h4>
+                        <ul>
+                            <li>Drove <strong>MVP development</strong> for <strong>eBay</strong>, accelerating delivery by <strong>40%</strong> through Agile methodologies.</li>
+                            <li>Enhanced <strong>Verizon’s chatbot</strong> experience, cutting query resolution time by <strong>30%</strong>.</li>
+                            <li>Crafted <strong>user stories & personas</strong>, aligning product design with real user needs.</li>
+                            <li>Led <strong>product demos for 200+ stakeholders</strong>, boosting chatbot engagement by <strong>35%</strong>.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="experience-item">
+                        <h3>💡 Senior Systems Engineer</h3>
+                        <h4>Infosys Limited | Bangalore, India | Jan 2019 - Mar 2022</h4>
+                        <ul>
+                            <li>Spearheaded <strong>GSTR-4 tax form development</strong>, improving operational efficiency by <strong>20%</strong>.</li>
+                            <li>Developed <strong>scalable REST APIs</strong> using <strong>Kafka, SQL & HBase</strong>, increasing system efficiency by <strong>25%</strong>.</li>
+                            <li>Streamlined <strong>B2B workflows</strong>, ensuring compliance with government regulations.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="experience-item">
+                        <h3>🌍 Software Engineer</h3>
+                        <h4>DXC Technology | Bangalore, India | Aug 2018 - Jan 2019</h4>
+                        <ul>
+                            <li>Conducted <strong>market research</strong> for <strong>P&G</strong>, delivering insights for packaging strategies.</li>
+                            <li>Designed a <strong>go-to-market strategy</strong>, increasing <strong>serviceable obtainable market (SOM) by 20%</strong>.</li>
+                        </ul>
+                    </div>
+                </div>                
+            
+                <div id="education" class="content">
+                    <div class="education-item">
+                        <h3>🎓 Master’s in Engineering Management</h3>
+                        <h4>University of North Carolina - Charlotte | USA | Aug 2023 - May 2025</h4>
+                        <ul>
+                            <li>GPA: <strong>3.9</strong></li>
+                            <li>Relevant coursework: <strong>Total Quality Management, Product Strategy & Marketing, Project Management, Supply Chain Management, Capital Cost Estimation</strong></li>
+                        </ul>
+                    </div>
+                
+                    <div class="education-item">
+                        <h3>🎓 Bachelor’s in Computer Science</h3>
+                        <h4>Visvesvaraya Technological University | India | Jun 2014 – Jun 2018</h4>
+                        <ul>
+                            <li>GPA: <strong>4.0</strong></li>
+                            <li>Relevant coursework: <strong>Computer Science, Java, Python, Operations Management, Machine Learning, Database Management</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
 </div>
 <div id="services">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title">I'm Good At</h1>
         <div class="services-list">
             <div>
                 <i class="fa-brands fa-product-hunt"></i>
                 <h2>Product Development</h2>
-                <p>Product </p>
-                <a href="#"> Learn more</a>
+                <p>Bringing ideas to life through agile methodologies, rapid MVP development, and iterative improvements.</p>
+                <a href="https://github.com/your-profile/product-development"> Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-pencil"></i>
                 <h2>UX & System Design</h2>
-                <p> User Experience</p>
-                <a href="#"> Learn more</a>
+                <p>Designing intuitive user experiences and scalable system architectures that drive efficiency.</p>
+                <a href="https://github.com/your-profile/ux-system-design"> Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Programming</h2>
-                <p> Models</p>
-                <a href="#"> Learn more</a>
+                <p>Building high-performance software using Java, Python, SQL, and microservices architecture.</p>
+                <a href="https://github.com/your-profile/programming-projects"> Learn more</a>
             </div>
         </div>
     </div>
@@ -103,7 +159,7 @@
 
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <h1 class="sub-title">My Projects</h1>
         <div class="work-list">
             <div class="work">
                 <img src="Images/worl-1.jpg">
@@ -118,7 +174,7 @@
                 <div class="layer">
                     <h3>Cardio Vascular Disease Prediction through Machine Learning</h3>
                     <p>In Progress</p>
-                    <a href ="#"><i class="fa-solid fa-link"></i></a>
+                    <a href ="https://github.com/sneh6677/Final_Capstone_Project/blob/main/CVD_Capstone.ipynb"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -177,21 +233,20 @@
         <p>No rights to copy <i class="fa-regular fa-face-grin-tongue-wink"></i></p>
     </div>
 </div>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-        
-    }
+<script>
+    
+    function showTab(tabId) {
+    document.querySelectorAll(".tab").forEach(tab => {
+        tab.classList.remove("active");
+    });
+    document.querySelectorAll(".content").forEach(content => {
+        content.classList.remove("active");
+    });
+
+    document.getElementById(tabId).classList.add("active");
+    event.target.classList.add("active");
+}
 </script>
 <script>
     var sidemenuI = document.getElementById(sidemenu);

@@ -32,6 +32,9 @@ nav{
 .logo{
     width: 140px;
 }
+.logo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -70,15 +73,22 @@ nav ul li a:hover::after{
 .header-text h1{
     font-size: 70px;
 }
-.header-text h1 span{
-    color:black;
-    font-style: italic;
-    font-size: 70px;
-    
+
+.profile-image {
+    width: 600px; /* Adjust the size as needed */
+    height: 400px;
+    object-fit:fill;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    transition: transform 0.3s ease-in-out; /* Smooth effect */
+}
+.profile-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 #about{
     padding: 80px 0;
-    color: antiquewhite;
+    color: #f5f5f5;
 }
 .row{
     display: flex;
@@ -92,6 +102,36 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 15px;
 }
+.about-col-2 {
+    max-width: 800px;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.highlight {
+    color: #ff004f; /* Gold highlight */
+    font-weight: 600;
+}
+
+/* Fade-in transition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .about-col-2{
     flex-basis: 60%;
 }
@@ -100,81 +140,240 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: #fff;
 }
-.tab-title{
+.tabs {
     display: flex;
-    margin: 20px 0 40px;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
 }
 
-.tab-links {
-     
-    margin-right: 50px;             /* Removes default paragraph spacing */
-    cursor: pointer;       /* Makes it look clickable */
-    font-weight: 500; 
-    font-size: 18px;
+.tab {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
     position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
 }
-.tab-links::after{
-    content: ' ';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
 
+.tab:hover {
+    color: #e74c3c; /* Hover effect */
 }
-.tab-links.active-link::after{
-    width: 50%;
+
+.tab.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #e74c3c;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
 }
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color: #ff004f;
-    font-size: 14px;
-}
-.tab-contents{
+
+.content {
     display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
-.tab-contents.active-tab{
+
+.content.active {
     display: block;
 }
 
-#services{
-    padding: 20px 0;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-.services-list{
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px auto;
+    width: 70%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.skill-item h3 {
+    color:  #ff004f;
+    font-size: 1.4rem;
+}
+
+.skill-item p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+.experience-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.experience-item h3 {
+    color:#ff004f;
+    font-size: 1.5rem;
+}
+
+.experience-item h4 {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.experience-item ul {
+    padding-left: 20px;
+}
+
+.experience-item ul li {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin: 8px 0;
+    line-height: 1.6;
+    position: relative;
+}
+
+.experience-item ul li::before {
+    content: "⚡"; /* Custom bullet point */
+    color: #e74c3c;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -20px;
+    top: 3px;
+}
+.education-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px auto;
+    width: 80%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+}
+
+.education-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.education-item h3 {
+    color: #ff004f; /* Blue color for education headers */
+    font-size: 1.5rem;
+}
+
+.education-item h4 {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.education-item ul {
+    padding-left: 10px;
+}
+
+.education-item ul li {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin: 8px 0;
+    line-height: 1.6;
+    position: relative;
+}
+
+.education-item ul li::before {
+    content: "🎯"; /* Custom bullet point */
+    color: #3498db;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -20px;
+    top: 3px;
+}
+
+#services {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+}
+
+.sub-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
+
+.services-list div {
     background: #262626;
     padding: 40px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     border-radius: 10px;
-    transition: bachkground 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
+    text-align: center;
 }
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
 
+.services-list div:hover {
+    background: #ff004f; /* Your original hover effect */
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3);
 }
-.services-list div a{
+
+.services-list i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ff004f; /* Default icon color */
+    transition: color 0.5s;
+}
+
+.services-list div:hover i {
+    color: #fff; /* Icon changes to white on hover */
+}
+
+.services-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.services-list p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.services-list a {
     text-decoration: none;
     color: #fff;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
-.services-list div:hover{
-    background: #ff004f;
-    transform: translate(-10px);
+
+.services-list div:hover a {
+    color: #fff;
 }
+
 #portfolio{
     padding: 50px;
 }
