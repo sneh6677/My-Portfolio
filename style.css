@@ -11,20 +11,53 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: #f8caca; /* Soft pink shade */
     color: #222;
 }
+
 
 html{
     scroll-behavior: smooth;
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
+   
+    background-color: #f8caca; /* Same soft pink */
     margin: 0;
     padding: 0;
     color: #222;
 }
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing */
+    background-color: #dfe6e9; /* Light background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.logo {
+    background-color: #162447; /* Dark background */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.portfolio-title {
+    font-size: 20px;
+    color: #2d3436; /* Dark gray text */
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Hero Section */
 /* Hero Section */
 /* Hero Section */
@@ -39,6 +72,7 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 
 /* Hero Text */
 .hero-content {
@@ -661,6 +695,19 @@ p {
     background: #ff004f;
     color: white;
 }
+/* Portfolio Project Cards - Smooth Fade & Slide-In */
+.portfolio {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When element is visible */
+.portfolio.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .btn{
     display: block;
@@ -670,7 +717,7 @@ p {
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #0e0b0b;
     transition: background 0.5s;
 }
 .btn:hover{
@@ -857,7 +904,7 @@ h4 {
     max-width: 80%; /* Utilize more space */
     margin: auto; /* Centering */
 }
-*::after {
-    border-bottom: none !important;
-    background: none !important;
+
+#about, #portfolio, #services, #contact {
+    background-color: #f8caca; /* Same soft pink */
 }

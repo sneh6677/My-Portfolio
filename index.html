@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome">
     <meta name="viewport" content="width = device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <div class="title-container">
+        <div class="logo">SS</div>
+        <h1 class="portfolio-title">Sneha Shivanna</h1>
+    </div>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/22af6e3359.js" crossorigin="anonymous"></script>
 </head>   
@@ -295,5 +298,26 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+<script>
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function handleScroll() {
+        document.querySelectorAll(".portfolio").forEach(project => {
+            if (isInViewport(project)) {
+                project.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("DOMContentLoaded", handleScroll);
+</script>
+
 </body>
 </html>
