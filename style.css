@@ -863,6 +863,115 @@ form input:focus, form textarea:focus {
     }
 }
 
+/* Balance & Harmony Section */
+#wellness {
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #f4f0ff, #eae6ff); /* Matches other sections */
+}
+
+/* New Layout: Text + Yoga Image */
+.wellness-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Text Content */
+.wellness-text {
+    flex: 1;
+    text-align: left;
+    max-width: 450px;
+}
+
+.wellness-text h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: left; /* Aligns heading */
+}
+
+.wellness-text p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Yoga Image */
+.yoga-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.yoga-image img {
+    width: 100%;
+    max-width: 370px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Bottom: Three Images */
+.wellness-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.wellness-images img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .wellness-text-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .yoga img {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .wellness-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .wellness-images img {
+        width: 45%;
+        max-width: 200px;
+    }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .wellness-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wellness-text {
+        text-align: center;
+    }
+
+    .wellness-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .wellness-images img {
+        width: 45%;
+        max-width: 200px;
+    }
+}
+
 
 /* 🎨 Submit Button */
 form .btn2 {
