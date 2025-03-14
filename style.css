@@ -293,12 +293,7 @@ nav {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 /* ABOUT SECTION */
-/* ABOUT SECTION FIX */
-/* ABOUT ME SECTION */
-/* ABOUT SECTION */
-/* About Section */
-/* About Section Fix */
-/* ABOUT SECTION FIX */
+
 #about {
     display: flex;
     align-items: flex-start; /* Align text & image to top */
@@ -799,6 +794,75 @@ form input:focus, form textarea:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(255, 0, 79, 0.2);
 }
+/* Graduate Teaching Assistant Section */
+#gta {
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #f4f0ff, #eae6ff); /* Matches About Me section */
+}
+
+/* Side-by-side layout */
+.gta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Left Side: Image */
+.gta-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.gta-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Right Side: Text */
+.gta-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Add paragraph styling */
+.gta-description {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Content Box */
+.gta-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.gta-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .gta-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .gta-image img {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
 
 /* 🎨 Submit Button */
 form .btn2 {

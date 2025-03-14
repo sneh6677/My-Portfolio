@@ -33,7 +33,7 @@
         <div class="hero-content">
             <h1>Hey, I'm Sneha.<br> A product & tech innovator.</h1>
             <p>A software engineer and product thinker who loves solving complex problems through technology.</p>
-            <button class="cta-button" onclick="scrollToSection()">Explore My Work</button>
+            <button class="cta-button" onclick="scrollToSection()">Explore More</button>
         </div>
         <div class="hero-image">
             <img src="Images/background.png" alt="Sneha Shivanna">
@@ -89,6 +89,7 @@
                 </div>
             </div>
 
+
            <!-- Experience Section -->
             <div id="experience" class="content">
                 <div class="experience-item">
@@ -143,10 +144,39 @@
         </ul>
     </div>
 </div>
+      </div>
+    </div>
 
+</div>
+
+<!-- Graduate Teaching Assistant Section -->
+<section id="gta">
+    <div class="gta-container">
+        <!-- Left Side: Image -->
+        <div class="gta-image">
+            <img src="Images/GA.jpg" alt="Sneha Shivanna">
+        </div>
+
+        <!-- Right Side: GTA Content -->
+        <div class="gta-text">
+            <h2 class="sub-title">🎓 Graduate Teaching Assistant</h2>
+            <p class="gta-description">
+                Supporting graduate and undergraduate students by teaching <strong>Engineering Decision Analysis</strong> and <strong>Production Control Systems</strong>.
+                Passionate about helping students grasp core concepts and apply them in real-world scenarios.
+            </p>
+            <div class="gta-item">
+                <h3>UNC Charlotte | Aug 2024 - Present</h3>
+                <ul>
+                    <li>Assisting in teaching Decision Analysis and Production Control Systems.</li>
+                    <li>Facilitating student engagement by guiding assignments and projects.</li>
+                    <li>Developing instructional materials to support course objectives.</li>
+                    <li>Conducting office hours to support student learning and address queries.</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
 <div id="services">
     <div class="container">
         <h1 class="sub-title">I'm Good At</h1>
@@ -173,6 +203,8 @@
     </div>
 </div>
 
+
+
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
@@ -180,8 +212,9 @@
             <div class="work">
                 <img src="Images/worl-1.jpg">
                 <div class="layer">
-                    <h3>Real-time Delivery: Enhancement</h3>
-                    <p>In Progress</p>
+                    <h3>Last-Mile Delivery Enhancement</h3>
+                    <p style="font-size: 12px;">Why is Last mile communication still broken ? 
+                    </p>
                     <a href ="https://github.com/sneh6677/Blue-Dart.git"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
@@ -189,16 +222,18 @@
                 <img src="Images/work-2.jpg">
                 <div class="layer">
                     <h3>Cardio Vascular Disease Prediction through Machine Learning</h3>
-                    <p>In Progress</p>
+                    <p style="font-size: 12px;">Supervised Learning MOdels: K-Nearest Neighbors, Logistic Regression, Support Vector Machine, Decision Trees,
+                        Random Forest Technique
+                    </p>
                     <a href ="https://github.com/sneh6677/Final_Capstone_Project/blob/main/CVD_Capstone.ipynb"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="Images/work-3.jpg">
+                <img src="Images/COVID-19.png">
                 <div class="layer">
-                    <h3>Australian Wine </h3>
-                    <p>In Progress</p>
-                    <a href ="#"><i class="fa-solid fa-link"></i></a>
+                    <h3>Covid-19 Data Analysis </h3>
+                    <p style="font-size: 12px;">Basic Data Analysis on Covid Death and Positive cases worldwide</p>
+                    <a href ="https://github.com/sneh6677/Covid19_DataAnalysis"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -221,6 +256,7 @@
         <a href="#" class="btn">See more</a>
     </div>
 </div>
+
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -265,7 +301,7 @@
 </script>
 <script>
     function scrollToSection() {
-        document.getElementById("services").scrollIntoView({
+        document.getElementById("gta").scrollIntoView({
             behavior: "smooth"
         });
     }
