@@ -123,6 +123,7 @@ body {
     transform: scale(1.1);
 }
 
+
 /* Image Optimization */
 /* Hero Image */
 .hero-image img {
@@ -1077,7 +1078,132 @@ h4 {
     max-width: 80%; /* Utilize more space */
     margin: auto; /* Centering */
 }
+/* 🎓 Certification Section */
+#certifications {
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #f8caca; /* Matching your theme */
+    color: #222;
+}
 
-#about, #portfolio, #services, #contact {
-    background-color: #f8caca; /* Same soft pink */
+/* Section Title */
+#certifications .sub-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #1E2A38;
+}
+
+/* Certifications Grid */
+.certifications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* Individual Certification Card */
+.cert-item {
+    background: #ffffff; /* White background for cards */
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Hover Effect */
+.cert-item:hover {
+    transform: translateY(-8px); /* Slight lift */
+    background: #ff004f; /* Red hover effect */
+    color: #ffffff;
+}
+
+/* Certification Logos */
+.cert-item img {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Images */
+.cert-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Titles */
+.cert-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.3s;
+}
+
+/* Hover Effect on Titles */
+.cert-item:hover h2 {
+    color: #fff;
+}
+
+/* Description Text */
+.cert-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    transition: color 0.3s;
+}
+
+/* Hover Effect on Text */
+.cert-item:hover p {
+    color: #ddd;
+}
+
+/* Learn More Link */
+.cert-item a {
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.cert-item:hover a {
+    color: #ffffff;
+}
+
+/* 🌟 Fix Background Issues - Remove Gradients and Apply Soft Pink */
+
+/* ✅ Keep the header unchanged */
+#header {
+    background-color: #f4f0ff; /* Keep distinct */
+}
+
+/* ✅ Apply soft pink to all sections, including hero */
+#about, #portfolio, #services, #contact, #gta, #wellness, .hero {
+    background-color: #f8caca !important; /* Apply soft pink */
+    background-image: none !important; /* Remove any background images or gradients */
+}
+
+/* ✅ Remove any conflicting hero section background */
+.hero {
+    background: #f8caca !important; /* Apply soft pink */
+    background-image: none !important; /* Remove existing gradients */
+}
+
+/* ✅ Ensure body background is consistent */
+body {
+    background-color: #f8caca !important;
+}
+
+/* ✅ Remove any previous background styles applied via pseudo-elements */
+.hero::before {
+    background: none !important;
 }
