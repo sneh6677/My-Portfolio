@@ -293,184 +293,162 @@ nav {
 .profile-image:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
-/* ABOUT SECTION */
 
+/* 🎨 About Section */
 #about {
+    padding: 80px 10%;
+    background-color: #f8caca; /* Soft Pink */
     display: flex;
-    align-items: flex-start; /* Align text & image to top */
-    justify-content: space-between;
-    flex-wrap: nowrap; /* Prevents content from wrapping */
-    gap: 50px;
-    padding: 100px 10%;
-    background: linear-gradient(90deg, #F4F0FF, #EAE6FF);
+    align-items: center;
+    justify-content: center;
 }
 
-/* Prevent Content from Wrapping */
-.about-container {
+/* Container for Image and Text */
+#about .container {
     display: flex;
-    align-items: flex-start; /* Aligns everything at the top */
-    justify-content: space-between;
+    align-items: center;
+    gap: 50px; /* Space between text and image */
     max-width: 1200px;
     width: 100%;
-    gap: 50px;
 }
 
-/* Left Image Fix */
-.about-col-1 {
-    flex: 1;
-    max-width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.about-col-1 img {
-    width: 400px; /* Fixed width to prevent resizing */
-    height: 450px; /* Fixed height */
-    object-fit: cover; /* Ensures aspect ratio is maintained */
+/* Left Image */
+.about-img img {
+    width: 100%;
+    max-width: 450px;
     border-radius: 15px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Right Content */
-.about-col-2 {
-    flex: 1.5;
-    max-width: 55%;
-    padding-left: 30px;
+/* Right Text */
+.about-text {
+    flex: 1;
+    font-family: 'Merriweather', serif; /* Keep previous font */
 }
 
-/* Prevent Content Shifting */
-#skills, #experience, #education {
-    min-height: 280px; /* Prevents shifting when switching tabs */
-    overflow: hidden;
-}
-
-
-.sub-title {
+/* Section Title */
+.about-text .sub-title {
     font-size: 2.5rem;
-    font-weight: 700;
-    color: #1E2A38;
+    font-weight: bold;
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-p {
+/* About Me Paragraphs */
+.about-text p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #444;
-    margin-bottom: 10px;
+    color: #333;
+    font-weight: 400;
 }
 
-.highlight {
-    color: #FF3366;
-    font-weight: 600;
-}
-
-/* Tabs */
-.tabs {
-    display: flex;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.tab {
-    font-size: 1.2rem;
+/* Bold (Important) Words with Different Color */
+.about-text strong {
     font-weight: bold;
-    cursor: pointer;
-    padding-bottom: 5px;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-    color: #555;
+    color: #d61c4e; /* Deep Red for a Strong Impact */
 }
 
-.tab:hover {
-    color: #ff3366;
-}
-
-/* Underline Effect */
-.tab::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 3px;
-    background-color: #ff3366;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: width 0.3s ease-in-out;
-}
-
-.tab.active::after,
-.tab:hover::after {
-    width: 100%;
-}
-
-
-/* Content Section */
-/* Smooth Fade-In Effect */
-.content {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.content.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+/* 📱 Responsive Design */
+@media screen and (max-width: 900px) {
+    #about .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .about-img img {
+        max-width: 100%;
     }
 }
-.skill-item, .experience-item, .education-item {
-    background: linear-gradient(135deg, #f4f0ff, #eae6ff);
-    padding: 20px;
+
+
+
+
+/* Skills, Experience, and Education Section */
+#skills, #experience, #education {
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #f8caca; /* Soft Pink */
+    color: #222;
+}
+
+/* Section Titles */
+#skills .sub-title, #experience .sub-title, #education .sub-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #1E2A38;
+}
+
+/* Grid Layout for Consistency */
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* Individual Card Styling */
+.grid-item {
+    background: #ffffff; /* White card */
+    padding: 30px;
     border-radius: 12px;
-    margin: 15px auto;
-    width: 80%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: left;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.skill-item:hover, .experience-item:hover, .education-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+/* Hover Effect */
+.grid-item:hover {
+    transform: translateY(-8px);
+    background: #ff004f;
+    color: #ffffff;
 }
-.skill-item h3::before, .experience-item h3::before, .education-item h3::before {
-    display: inline-block;
+
+/* Titles */
+.grid-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.3s;
+}
+
+/* Hover Effect on Titles */
+.grid-item:hover h2 {
+    color: #fff;
+}
+
+/* Description Text */
+.grid-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    transition: color 0.3s;
+}
+
+/* Hover Effect on Text */
+.grid-item:hover p {
+    color: #ddd;
+}
+
+/* Company Logos */
+.company-logo {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 15px;
     transition: transform 0.3s ease-in-out;
 }
 
-.skill-item:hover h3::before, .experience-item:hover h3::before, .education-item:hover h3::before {
-    transform: rotate(10deg) scale(1.1);
+/* Hover Effect on Logos */
+.grid-item:hover .company-logo {
+    transform: scale(1.1);
 }
-@media screen and (max-width: 768px) {
-    #about {
-        flex-direction: column; /* Stack image and text on smaller screens */
-        align-items: center;
-    }
 
-    .about-col-1, .about-col-2 {
-        max-width: 100%;
-    }
-
-    .about-col-1 img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-#skills, #experience, #education {
-    min-height: 250px; /* Prevent resizing when switching tabs */
-}
 /* SERVICES SECTION FIX */
 /* SERVICES SECTION FIX - MATCHING HOME & ABOUT */
 #services {
@@ -796,6 +774,7 @@ form input:focus, form textarea:focus {
     box-shadow: 0 0 10px rgba(255, 0, 79, 0.2);
 }
 /* Graduate Teaching Assistant Section */
+/* Graduate Teaching Assistant Section */
 #gta {
     padding: 60px 10%;
     background: linear-gradient(135deg, #f4f0ff, #eae6ff); /* Matches About Me section */
@@ -829,7 +808,15 @@ form input:focus, form textarea:focus {
     text-align: left;
 }
 
-/* Add paragraph styling */
+/* GTA Section Title */
+.gta-text .sub-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1E2A38;
+}
+
+/* GTA Description */
 .gta-description {
     font-size: 1.2rem;
     color: #444;
@@ -851,6 +838,16 @@ form input:focus, form textarea:focus {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsibilities Text */
+.gta-responsibilities p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     .gta-container {
@@ -862,7 +859,12 @@ form input:focus, form textarea:focus {
         width: 80%;
         max-width: 250px;
     }
+
+    .gta-responsibilities p {
+        font-size: 1rem;
+    }
 }
+
 
 /* Balance & Harmony Section */
 #wellness {
