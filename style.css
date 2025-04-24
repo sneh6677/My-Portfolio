@@ -388,9 +388,109 @@ nav {
         max-width: 100%;
     }
 }
-
-
-
+#skillsPieChart {
+    max-width: 340px;
+    max-height: 340px;
+    width: 100%;
+    height: auto;
+  }
+.skills-chart-container {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .chart-legend ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chart-legend li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+  }
+  
+  .legend-color.pm { background-color: #4CAF50; }
+  .legend-color.ai { background-color: #FF9800; }
+  .legend-color.dev { background-color: #2196F3; }
+  .legend-color.bi { background-color: #9C27B0; }
+  .legend-color.ux { background-color: #FFC107; }
+  
+  @media screen and (max-width: 768px) {
+    .skills-chart-container {
+      flex-direction: column;
+    }
+  }
+  
+  #combined-roadmap {
+    padding: 80px 5%;
+    background-color: #f8caca;
+    text-align: center;
+  }
+  
+  .timeline-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    z-index: 0;
+  }
+  
+  .milestone {
+    text-align: center;
+    position: relative;
+    width: 130px;
+    z-index: 1;
+  }
+  
+  
+  .milestone img {
+    width: 120px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .milestone h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5px 0 2px;
+  }
+  
+  .milestone p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .milestone span {
+    font-size: 0.85rem;
+    color: #555;
+  }
 
 /* Skills, Experience, and Education Section */
 #skills, #experience, #education {
@@ -1153,6 +1253,10 @@ form .btn2:hover {
     }
 
 }
+#about {
+    font-family: 'Inter', sans-serif;
+  }
+  
 
 p, h3, h4 {
     font-size: 1.2rem;

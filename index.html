@@ -10,7 +10,11 @@
         
         <!-- Styles and FontAwesome -->
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/22af6e3359.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
     </head>
     
 <body>
@@ -48,7 +52,7 @@
     <div class="container">
         <!-- Left Image -->
         <div class="about-img">
-            <img src="Images/HeroImage.png" alt="Sneha Shivanna">
+            <img src="Images/order5.jpg" alt="Sneha Shivanna">
         </div>
 
         <!-- Right Text -->
@@ -76,39 +80,101 @@
 </section>
 
 
-<!-- Skills Section -->
-<section id="skills">
+<section id="skills-chart">
+    <h2 class="sub-title" style="text-align: center;">📊 My KPI's</h2>
+    <div class="skills-chart-container">
+      <!-- Legend on the left -->
+      <div class="chart-legend">
+        <ul>
+          <li><span class="legend-color pm"></span> Product Management</li>
+          <li><span class="legend-color ai"></span> AI/ML</li>
+          <li><span class="legend-color dev"></span> Software Development</li>
+          <li><span class="legend-color bi"></span> Business Intelligence</li>
+          <li><span class="legend-color ux"></span> Market Research & UI/UX Design</li>
+        </ul>
+      </div>
+  
+      <!-- Pie Chart -->
+      <canvas id="skillsPieChart" width="100" height="100"></canvas>
+    </div>
+  </section>
+
+  <!-- Combined Roadmap Section -->
+<section id="combined-roadmap">
+    <h2 class="sub-title">🗺️ My Roadmap</h2>
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+  
+      <div class="milestone">
+        <div class="milestone-dot"></div>
+        <img src="Images/vtu.jpeg" alt="VTU">
+        <h4>VTU</h4>
+        <p>B.Tech in Computer Science</p>
+        <span>2014 – 2018</span>
+      </div>
+  
+      <div class="milestone">
+        <div class="milestone-dot"></div>
+        <img src="Images/dxc.png" alt="DXC Technology">
+        <h4>DXC Technology</h4>
+        <p>Software Engineer</p>
+        <span>2018 – 2019</span>
+      </div>
+  
+      <div class="milestone">
+        <div class="milestone-dot"></div>
+        <img src="Images/Infosys.png" alt="Infosys">
+        <h4>Infosys</h4>
+        <p>Senior Systems Engineer</p>
+        <span>2019 – 2022</span>
+      </div>
+  
+      <div class="milestone">
+        <div class="milestone-dot"></div>
+        <img src="Images/cognizant.png" alt="Cognizant">
+        <h4>Cognizant</h4>
+        <p>Associate Product Manager</p>
+        <span>2022 – 2023</span>
+      </div>
+  
+      <div class="milestone">
+        <div class="milestone-dot"></div>
+        <img src="Images/uncc.jpeg" alt="UNC Charlotte">
+        <h4>UNC Charlotte</h4>
+        <p>Master's in Engg. Mgmt</p>
+        <span>2023 – 2025</span>
+      </div>
+  
+      <div class="milestone">
+        <div class="milestone-dot"></div>
+        <img src="Images/GA.jpg" alt="Graduate TA">
+        <h4>UNC Charlotte</h4>
+        <p>Graduate Teaching Assistant</p>
+        <span>2024 – Present</span>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Education Section -->
+<section id="education">
     <div class="container">
-        <h1 class="sub-title">🚀 Skills</h1>
+        <h1 class="sub-title">🎓 Education</h1>
         <div class="grid-list">
             <div class="grid-item">
-                <h2>🚀 Product Development</h2>
-                <p>Designing roadmaps aligned with business goals.</p>
+                <img src="Images/uncc.jpeg" alt="Cognizant Logo" class="company-logo">
+                <h2>🎓 Master’s in Engineering Management</h2>
+                <h4>UNC Charlotte</h4>
+                <p>GPA: 3.9 | Specializing in Product Strategy, Supply Chain, and Agile.</p>
             </div>
             <div class="grid-item">
-                <h2>📊 Market Research</h2>
-                <p>Analyzing market trends to drive product decisions.</p>
-            </div>
-            <div class="grid-item">
-                <h2>🗺️ AI and Virtual Automation</h2>
-                <p>Fine tuning AI-models with GPT-based Natural Langauge Processing.</p>
-            </div>
-            <div class="grid-item">
-                <h2>🗺️ Machine Learning</h2>
-                <p>Applied machine learning techniques to optimize AI-driven chatbots, enhance predictive analytics</p>
-            </div>
-            <div class="grid-item">
-                <h2>📈 Business Analysis</h2>
-                <p>Interpreting data to improve operations and efficiency.</p>
-            </div>
-            <div class="grid-item">
-                <h2>🎨 UI/UX</h2>
-                <p>Creating user-centric designs for better engagement.</p>
+                <img src="Images/vtu.jpeg" alt="Cognizant Logo" class="company-logo">
+                <h2>🎓 Bachelor’s in Computer Science</h2>
+                <h4>Visvesvaraya Technological University</h4>
+                <p>GPA: 4.0 | Focused on AI, ML, and Software Development.</p>
             </div>
         </div>
     </div>
 </section>
-
 <!-- Experience Section -->
 <section id="experience">
     <div class="container">
@@ -136,59 +202,6 @@
         </div>
     </div>
 </section>
-<!-- Freelance Project Section -->
-<section id="freelance">
-    <div class="container">
-        <h1 class="freelance-title">
-            🦷 Smiles, Sprints, and Software: <span>My Freelance Journey</span> 
-          </h1>          
-      <div class="freelance-container">
-        <div class="freelance-image">
-          <img src="Images/Poo.JPG" alt="SP Dental Care Project">
-        </div>
-        <div class="freelance-text">
-          <h2>SP Dental Care – A Patient-Centric Dental App</h2>
-          <p>
-            Partnered with <strong>Dr. Pooja Priyadarshini Sudarsanam</strong> to conceptualize, design, and build a custom software solution for <strong>SP Dental Care</strong> tailored for streamlining clinic operations and improving patient engagement in a dental practice setting.
-            Our collaboration was grounded in mutual strengths: she provided deep domain expertise and operational insights, while I brought technical proficiency and product vision. Together, we identified core pain points in appointment scheduling, patient tracking, and membership differentiation, and transformed them into a user-friendly digital experience.
-             <strong>🔧 My contributions included: </strong>
-                Leading the end-to-end product development lifecycle, from requirements gathering to MVP planning and feature roadmap definition.
-                Engineering a seamless web-based platform that enabled patients to:
-                    📅 Self-schedule appointments online
-                    📈 Track their visit history and upcoming consultations
-                    🌟 Access custom experiences based on their premium or regular membership tier
-                I contributed across the product lifecycle — from MVP planning and technical architecture to feature implementation and deployment — showcasing a balanced blend of product ownership and engineering execution.
-          </p>
-          <p>
-            To extend the app’s impact, I facilitated its transition to another clinic, where it was later adapted to new requirements.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-<!-- Education Section -->
-<section id="education">
-    <div class="container">
-        <h1 class="sub-title">🎓 Education</h1>
-        <div class="grid-list">
-            <div class="grid-item">
-                <img src="Images/uncc.jpeg" alt="Cognizant Logo" class="company-logo">
-                <h2>🎓 Master’s in Engineering Management</h2>
-                <h4>UNC Charlotte</h4>
-                <p>GPA: 3.9 | Specializing in Product Strategy, Supply Chain, and Agile.</p>
-            </div>
-            <div class="grid-item">
-                <img src="Images/vtu.jpeg" alt="Cognizant Logo" class="company-logo">
-                <h2>🎓 Bachelor’s in Computer Science</h2>
-                <h4>Visvesvaraya Technological University</h4>
-                <p>GPA: 4.0 | Focused on AI, ML, and Software Development.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <!-- Graduate Teaching Assistant Section -->
 <section id="gta">
     <div class="gta-container">
@@ -210,12 +223,13 @@
                     <p>📌 Assisting in teaching Risk & Decision Analysis and Production Control Systems.</p>
                     <p>🎯 Facilitating student engagement by guiding assignments and projects.</p>
                     <p>📖 Developing instructional materials to support course objectives.</p>
-                    <p>💡 Conducting **office hours to support student learning and address queries.</p>
+                    <p>💡 Conducting office hours to support student learning and address queries.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 
 <div id="certifications">
@@ -244,35 +258,6 @@
         </div>
     </div>
 </div>
-
-
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">I'm Good At</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-brands fa-product-hunt"></i>
-                <h2>Product Development</h2>
-                <p>Bringing ideas to life through agile methodologies, rapid MVP development, and iterative improvements.</p>
-                <a href="https://github.com/your-profile/product-development"> Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-pencil"></i>
-                <h2>UX & System Design</h2>
-                <p>Designing intuitive user experiences and scalable system architectures that drive efficiency.</p>
-                <a href="https://github.com/your-profile/ux-system-design"> Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Programming</h2>
-                <p>Building high-performance software using Java, Python, SQL, and microservices architecture.</p>
-                <a href="https://github.com/your-profile/programming-projects"> Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 <div id="portfolio">
     <div class="container">
@@ -326,6 +311,36 @@
     </div>
 </div>
 
+<!-- Freelance Project Section -->
+<section id="freelance">
+    <div class="container">
+        <h1 class="freelance-title">
+            🦷 Smiles, Sprints, and Software: <span>My Freelance Journey</span> 
+          </h1>          
+      <div class="freelance-container">
+        <div class="freelance-image">
+          <img src="Images/Poo.JPG" alt="SP Dental Care Project">
+        </div>
+        <div class="freelance-text">
+          <h2>SP Dental Care – A Patient-Centric Dental App</h2>
+          <p>
+            Partnered with <strong>Dr. Pooja Priyadarshini Sudarsanam</strong> to conceptualize, design, and build a custom software solution for <strong>SP Dental Care</strong> tailored for streamlining clinic operations and improving patient engagement in a dental practice setting.
+            Our collaboration was grounded in mutual strengths: she provided deep domain expertise and operational insights, while I brought technical proficiency and product vision. Together, we identified core pain points in appointment scheduling, patient tracking, and membership differentiation, and transformed them into a user-friendly digital experience.
+             <strong>🔧 My contributions included: </strong>
+                Leading the end-to-end product development lifecycle, from requirements gathering to MVP planning and feature roadmap definition.
+                Engineering a seamless web-based platform that enabled patients to:
+                    📅 Self-schedule appointments online
+                    📈 Track their visit history and upcoming consultations
+                    🌟 Access custom experiences based on their premium or regular membership tier
+                I contributed across the product lifecycle — from MVP planning and technical architecture to feature implementation and deployment — showcasing a balanced blend of product ownership and engineering execution.
+          </p>
+          <p>
+            To extend the app’s impact, I facilitated its transition to another clinic, where it was later adapted to new requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 <!-- Balance & Harmony Section -->
 <section id="wellness">
     <div class="wellness-container">
@@ -397,11 +412,62 @@
 </script>
 <script>
     function scrollToSection() {
-        document.getElementById("skills").scrollIntoView({
+        document.getElementById("freelance").scrollIntoView({
             behavior: "smooth"
         });
     }
 </script>
+<script>
+    const ctx = document.getElementById('skillsPieChart').getContext('2d');
+    const data = {
+      labels: [
+        'Product Management',
+        'AI/ML',
+        'Software Development',
+        'Business Intelligence',
+        'Market Research & UI/UX Design'
+      ],
+      datasets: [{
+        data: [40, 20, 15, 10, 15],
+        backgroundColor: [
+          '#4CAF50', // Product Management
+          '#FF9800', // AI/ML
+          '#2196F3', // Software Development
+          '#9C27B0', // Business Intelligence
+          '#FFC107'  // Market Research & UI/UX Design
+        ],
+        borderWidth: 1
+      }]
+    };
+  
+    const config = {
+      type: 'pie',
+      data: data,
+      options: {
+        plugins: {
+          datalabels: {
+            color: '#fff',
+            font: {
+              weight: 'bold',
+              size: 16
+            },
+            formatter: (value, context) => {
+              let total = context.chart._metasets[0].total;
+              let percentage = (value / total * 100).toFixed(0);
+              return percentage + '%';
+            }
+          },
+          legend: {
+            display: false // Hide Chart.js built-in legend (you already have a custom one)
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    };
+  
+    new Chart(ctx, config);
+  </script>
+  
 
 <script>
     var sidemenuI = document.getElementById(sidemenu);
