@@ -370,12 +370,6 @@ nav {
     font-weight: 400;
 }
 
-/* Bold (Important) Words with Different Color */
-.about-text strong {
-    font-weight: bold;
-    color: #d61c4e; /* Deep Red for a Strong Impact */
-}
-
 /* 📱 Responsive Design */
 @media screen and (max-width: 900px) {
     #about .container {
@@ -1423,3 +1417,112 @@ body {
 .hero::before {
     background: none !important;
 }
+/* Case Study: Last-Mile Delivery */
+#case-study-last-mile {
+    padding: 80px 10%;
+    background: #f8caca; /* matches theme */
+    color: #222;
+  }
+  
+  #case-study-last-mile .sub-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1E2A38;
+    margin-bottom: 30px;
+  }
+  
+  .cs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin: 20px 0 30px;
+  }
+  
+  .cs-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 20px 0 30px;
+  }
+  
+  @media (max-width: 900px) {
+    .cs-3col { grid-template-columns: 1fr; }
+  }
+  
+  .cs-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  
+  .cs-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  }
+  
+  #case-study-last-mile h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #1E2A38;
+    font-weight: 700;
+  }
+  
+  #case-study-last-mile h4 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #FF004F;
+    font-weight: 700;
+  }
+  
+  #case-study-last-mile p,
+  #case-study-last-mile li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  #case-study-last-mile ul {
+    padding-left: 18px;
+    margin: 8px 0 0;
+  }
+  
+  .cs-solution { margin-top: 10px; }
+  
+  .cs-metrics {
+    margin: 20px 0 10px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  
+  .cs-metrics ul { margin-top: 6px; }
+  
+  .cs-metrics li { margin-bottom: 6px; }
+  
+  .cs-note {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 6px;
+  }
+  
+  .cs-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  #case-study-last-mile .btn {
+    border-color: #ff004f;
+    color: #0e0b0b;
+  }
+  
+  #case-study-last-mile .btn:hover {
+    background: #ff004f;
+    color: #fff;
+  }
+  
+  
